@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medha — Elite Admin Console</title>
+    <link rel="icon" type="image/png" href="assets/medha.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/admin.css">
+</head>
+
+<body>
+
+    <!-- THE FLUID AURORA BACKGROUND -->
+    <div class="dashboard-bg-animated">
+        <div class="aurora-blob aurora-1"></div>
+        <div class="aurora-blob aurora-2"></div>
+        <div class="aurora-blob aurora-3"></div>
+    </div>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar float-wrapper-delayed">
+             <a href="index.html" class="nav-logo" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="assets/logo1.webp" alt="Medha Logo"
+                style="height: 32px; width: auto; max-width: 200px; object-fit: contain; display: block; border-radius: 4px;">
+        </a>
+
+            <div class="nav-label">Main Console</div>
+            <a class="nav-link active magnetic-nav" data-page="home"><span class="nav-icon">🚀</span> Overview</a>
+            <a class="nav-link magnetic-nav" data-page="verification">
+                <span class="nav-icon">🛡️</span> Verifications
+                <span class="badge badge-warning" style="margin-left:auto; font-size:0.7rem; padding:2px 8px;">12</span>
+            </a>
+           
+
+            <div class="nav-label">Databases</div>
+            <a class="nav-link magnetic-nav" data-page="teachers"><span class="nav-icon">👨‍🏫</span> Educators</a>
+            <a class="nav-link magnetic-nav" data-page="students"><span class="nav-icon">🎓</span> Students</a>
+
+            <div class="nav-label">Intelligence</div>
+            <a class="nav-link magnetic-nav"><span class="nav-icon">📈</span> Analytics</a>
+            <a class="nav-link magnetic-nav"><span class="nav-icon">⚙️</span> Settings</a>
+        </aside>
+
+        <!-- MAIN AREA -->
+        <main>
+            <!-- TOPBAR -->
+            <header class="topbar float-wrapper">
+                <input type="text" class="search-input" placeholder="🔍 Search IDs, Logs, or Users...">
+                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <span class="badge badge-success"
+                        style="padding: 8px 14px; font-size: 0.85rem; background: rgba(22, 163, 74, 0.15);">● System
+                        Operational</span>
+                    <div style="width: 1px; height: 30px; background: rgba(0,0,0,0.1);"></div>
+                    <div style="display: flex; align-items: center; gap: 12px; cursor: pointer;">
+                        <div style="text-align: right;">
+                            <h4 style="margin: 0; font-size: 0.95rem;">System Admin</h4>
+                            <span style="font-size: 0.75rem; color: var(--ink-muted); font-weight: 600;">Level 4
+                                Access</span>
+                        </div>
+                        <div
+                            style="width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(135deg, var(--ink-display), #334155); color: white; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                            SA</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ── OVERVIEW TAB ── -->
+            <div id="page-home" class="tab-panel active">
+
+                <!-- 3D Tilt Hero -->
+                <div class="tilt-wrapper">
+                    <div class="tilt-card" id="tilt-card">
+                        <div class="tilt-content">
+                            <span class="badge badge-info"
+                                style="background: rgba(0, 198, 255, 0.15); color: var(--primary); margin-bottom: 1rem;">Platform
+                                Status: Optimal</span>
+                            <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">Command Center</h1>
+                            <p style="font-size: 1.1rem; color: var(--ink-muted); max-width: 600px;">Real-time snapshot
+                                of Medha's operations, verification queues, and AI-driven security telemetry.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Metrics -->
+                <div class="bento-grid bento-grid-4" style="margin-bottom: 1.5rem;">
+                    <div class="bento-card">
+                        <div class="float-wrapper">
+                            <div class="icon-box bg-blue">👨‍🏫</div>
+                        </div>
+                        <div class="stat-num">12,847</div>
+                        <div class="stat-label">Verified Teachers</div>
+                        <span
+                            style="color: var(--green); font-size: 0.85rem; font-weight: 600; display: block; margin-top: 8px;">↑
+                            142 this month</span>
+                    </div>
+                    <div class="bento-card" style="transition-delay: 0.1s;">
+                        <div class="float-wrapper-delayed">
+                            <div class="icon-box bg-green">🎓</div>
+                        </div>
+                        <div class="stat-num">140k+</div>
+                        <div class="stat-label">Active Students</div>
+                        <span
+                            style="color: var(--green); font-size: 0.85rem; font-weight: 600; display: block; margin-top: 8px;">↑
+                            3,420 this month</span>
+                    </div>
+                    <div class="bento-card" style="transition-delay: 0.2s;">
+                        <div class="float-wrapper">
+                            <div class="icon-box bg-amber">⭐</div>
+                        </div>
+                        <div class="stat-num">97.2%</div>
+                        <div class="stat-label">Platform Satisfaction</div>
+                        <span
+                            style="color: var(--green); font-size: 0.85rem; font-weight: 600; display: block; margin-top: 8px;">↑
+                            0.4% points</span>
+                    </div>
+                    <div class="bento-card" style="transition-delay: 0.3s;">
+                        <div class="float-wrapper-delayed">
+                            <div class="icon-box bg-purple">📍</div>
+                        </div>
+                        <div class="stat-num">18</div>
+                        <div class="stat-label">States Covered</div>
+                        <span
+                            style="color: var(--ink-muted); font-size: 0.85rem; font-weight: 600; display: block; margin-top: 8px;">Steady
+                            Expansion</span>
+                    </div>
+                </div>
+
+                <div class="bento-grid bento-grid-2">
+                    <!-- Verification Queue -->
+                    <div class="bento-card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <h3>Pending Verifications</h3>
+                            <button class="btn btn-outline magnetic" onclick="showPage('verification')">View All
+                                (12)</button>
+                        </div>
+
+                        <div class="list-item">
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div
+                                    style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--cyan) 100%); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">
+                                    SP</div>
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0;">Sonal Patel</h4>
+                                    <p style="margin: 0; font-size: 0.85rem; color: var(--ink-muted);">Mathematics ·
+                                        Docs Verified</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn btn-success magnetic"
+                                    onclick="actionToast(this, 'Approved')">✓</button>
+                                <button class="btn btn-danger magnetic"
+                                    onclick="actionToast(this, 'Rejected')">✗</button>
+                            </div>
+                        </div>
+
+                        <div class="list-item">
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div
+                                    style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--amber) 0%, #FBBF24 100%); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem;">
+                                    RJ</div>
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin: 0;">Rajan Joshi</h4>
+                                    <p style="margin: 0; font-size: 0.85rem; color: var(--ink-muted);">Physics · Pending
+                                        BG Check</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn btn-success magnetic"
+                                    onclick="actionToast(this, 'Approved')">✓</button>
+                                <button class="btn btn-danger magnetic"
+                                    onclick="actionToast(this, 'Rejected')">✗</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Monitor -->
+                   
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── VERIFICATIONS TAB ── -->
+            <div id="page-verification" class="tab-panel">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+                    <div>
+                        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Identity Verifications</h1>
+                        <p style="font-size: 1.1rem; color: var(--ink-muted);">AI-assisted KYC and credential
+                            validation.</p>
+                    </div>
+                </div>
+
+                <div class="bento-card" style="padding: 0;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Applicant</th>
+                                <th>Domain & Region</th>
+                                <th>Documents</th>
+                                <th>Background</th>
+                                <th>Submitted</th>
+                                <th style="text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h4 style="margin: 0; font-size: 1.05rem;">Sonal Patel</h4>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted); font-family: monospace;">KYC-8812</span>
+                                </td>
+                                <td>Mathematics<br><span
+                                        style="font-size: 0.85rem; color: var(--ink-muted);">Gujarat</span></td>
+                                <td><span class="badge badge-success">✓ Verified</span></td>
+                                <td><span class="badge badge-success">✓ Clear</span></td>
+                                <td><span style="font-size: 0.9rem; color: var(--ink-muted);">3 hours ago</span></td>
+                                <td style="text-align: right;"><button class="btn btn-primary magnetic"
+                                        onclick="toast('Profile Opened')">Review</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 style="margin: 0; font-size: 1.05rem;">Vikrant Mehta</h4>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted); font-family: monospace;">KYC-8813</span>
+                                </td>
+                                <td>Physics<br><span
+                                        style="font-size: 0.85rem; color: var(--ink-muted);">Maharashtra</span></td>
+                                <td><span class="badge badge-danger">✗ Missing Degree</span></td>
+                                <td><span class="badge badge-success">✓ Clear</span></td>
+                                <td><span style="font-size: 0.9rem; color: var(--ink-muted);">1 day ago</span></td>
+                                <td style="text-align: right;"><button class="btn btn-primary magnetic"
+                                        onclick="toast('Profile Opened')">Review</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 style="margin: 0; font-size: 1.05rem;">Aditi Mishra</h4>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted); font-family: monospace;">KYC-8814</span>
+                                </td>
+                                <td>Chemistry<br><span style="font-size: 0.85rem; color: var(--ink-muted);">Delhi</span>
+                                </td>
+                                <td><span class="badge badge-success">✓ Verified</span></td>
+                                <td><span class="badge badge-warning">⏳ Pending</span></td>
+                                <td><span style="font-size: 0.9rem; color: var(--ink-muted);">2 days ago</span></td>
+                                <td style="text-align: right;"><button class="btn btn-primary magnetic"
+                                        onclick="toast('Profile Opened')">Review</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ── FRAUD MONITOR TAB ── -->
+            <div id="page-fraud" class="tab-panel">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+                    <div>
+                        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--red);">Risk & Compliance</h1>
+                        <p style="font-size: 1.1rem; color: var(--ink-muted);">Real-time anomaly detection and
+                            heuristics engine.</p>
+                    </div>
+                </div>
+
+                <div class="bento-grid bento-grid-2">
+                    <div class="bento-card">
+                        <h3 style="margin-bottom: 1.5rem;">Incident Action Queue</h3>
+
+                        <div class="fraud-event"
+                            style="background: rgba(255,255,255,0.8); border: 2px solid rgba(220, 38, 38, 0.4); box-shadow: 0 10px 30px rgba(220, 38, 38, 0.1);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                <h4 style="font-size: 1.1rem;">Identity Collision Detected</h4>
+                                <span class="badge badge-danger">SEV-1</span>
+                            </div>
+                            <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Accounts <code
+                                    style="background: rgba(0,0,0,0.05); padding: 2px 6px; border-radius: 4px;">USR-44821</code>
+                                and <code
+                                    style="background: rgba(0,0,0,0.05); padding: 2px 6px; border-radius: 4px;">USR-44823</code>
+                                share identical government ID hashes. Automated suspension triggered pending manual
+                                review.</p>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn btn-danger magnetic"
+                                    onclick="toast('Investigation Initiated')">Investigate Users</button>
+                                <button class="btn btn-outline magnetic"
+                                    onclick="toast('Marked as False Positive')">Dismiss</button>
+                            </div>
+                        </div>
+
+                        <div class="fraud-event"
+                            style="border-left-color: var(--amber); border-width: 2px; border-color: rgba(217, 119, 6, 0.3);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                <h4 style="font-size: 1.1rem;">Unusual Session Velocity</h4>
+                                <span class="badge badge-warning">SEV-2</span>
+                            </div>
+                            <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Student account <code
+                                    style="background: rgba(0,0,0,0.05); padding: 2px 6px; border-radius: 4px;">STU-67294</code>
+                                submitted 45 exam answers in 120 seconds. Flagged by heuristic engine.</p>
+                            <div style="display: flex; gap: 10px;">
+                                <button class="btn btn-outline magnetic"
+                                    onclick="toast('Session Invalidated')">Invalidate Session</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card">
+                        <div class="float-wrapper">
+                            <div class="icon-box bg-blue" style="margin-bottom: 1rem;">🧠</div>
+                        </div>
+                        <h3 style="margin-bottom: 1.5rem;">Engine Telemetry (30D)</h3>
+
+                        <div class="list-item" style="padding: 1.25rem;">
+                            <span style="font-weight: 600;">Events Analyzed</span>
+                            <span class="stat-num" style="font-size: 1.5rem; margin: 0;">1.4M</span>
+                        </div>
+                        <div class="list-item" style="padding: 1.25rem;">
+                            <span style="font-weight: 600;">Anomalies Flagged</span>
+                            <span class="stat-num" style="font-size: 1.5rem; margin: 0;">124</span>
+                        </div>
+                        <div class="list-item" style="padding: 1.25rem;">
+                            <span style="font-weight: 600;">Confirmed Violations</span>
+                            <span class="stat-num" style="font-size: 1.5rem; margin: 0; color: var(--red);">18</span>
+                        </div>
+                        <div class="list-item"
+                            style="padding: 1.25rem; background: rgba(22, 163, 74, 0.05); border-color: rgba(22, 163, 74, 0.2);">
+                            <span style="font-weight: 600; color: var(--green);">Engine Accuracy</span>
+                            <span class="stat-num"
+                                style="font-size: 1.5rem; margin: 0; color: var(--green);">85.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── TEACHERS DIRECTORY TAB ── -->
+            <div id="page-teachers" class="tab-panel">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+                    <div>
+                        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Educator Directory</h1>
+                        <p style="font-size: 1.1rem; color: var(--ink-muted);">Global database of verified Medha
+                            instructors.</p>
+                    </div>
+                    <button class="btn btn-primary btn-pulse magnetic" onclick="toast('Export Started...')">Export
+                        Database (CSV)</button>
+                </div>
+
+                <div class="bento-card" style="padding: 0;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Educator</th>
+                                <th>Specialization</th>
+                                <th>Active Cohort</th>
+                                <th>Quality Metric</th>
+                                <th>Status</th>
+                                <th style="text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h4 style="margin: 0; font-size: 1.05rem;">Dr. Meera Krishnan</h4>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted); font-family: monospace;">TCH-1042</span>
+                                </td>
+                                <td>Mathematics</td>
+                                <td><span style="font-weight: 700;">28</span> Students</td>
+                                <td><span style="font-weight: 800; color: var(--primary);">4.97</span> <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted);">/ 5.0</span></td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td style="text-align: right;"><button class="btn btn-outline magnetic"
+                                        onclick="toast('Opening Instructor Console...')">Manage</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 style="margin: 0; font-size: 1.05rem;">Rahul Sinha</h4>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted); font-family: monospace;">TCH-2184</span>
+                                </td>
+                                <td>Mathematics</td>
+                                <td><span style="font-weight: 700;">19</span> Students</td>
+                                <td><span style="font-weight: 800; color: var(--amber);">4.12</span> <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted);">/ 5.0</span></td>
+                                <td><span class="badge badge-warning">Review Flag</span></td>
+                                <td style="text-align: right;"><button class="btn btn-outline magnetic"
+                                        onclick="toast('Opening Instructor Console...')">Manage</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 style="margin: 0; font-size: 1.05rem;">Priya Nambiar</h4>
+                                    <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted); font-family: monospace;">TCH-3391</span>
+                                </td>
+                                <td>Physics</td>
+                                <td><span style="font-weight: 700;">26</span> Students</td>
+                                <td><span style="font-weight: 800; color: var(--primary);">4.82</span> <span
+                                        style="font-size: 0.8rem; color: var(--ink-muted);">/ 5.0</span></td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td style="text-align: right;"><button class="btn btn-outline magnetic"
+                                        onclick="toast('Opening Instructor Console...')">Manage</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- STUDENTS TAB (Placeholder structural equivalent) -->
+            <div id="page-students" class="tab-panel">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+                    <div>
+                        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Student Directory</h1>
+                        <p style="font-size: 1.1rem; color: var(--ink-muted);">Manage 140,284 active student profiles.
+                        </p>
+                    </div>
+                </div>
+                <div class="bento-card">
+                    <p style="text-align: center; color: var(--ink-muted); font-size: 1.1rem; padding: 3rem;">Student
+                        records loaded. (Use search via Topbar)</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- ELITE TOAST COMPONENT -->
+    <div id="toast"
+        style="position: fixed; bottom: 2rem; right: 2rem; background: linear-gradient(135deg, var(--ink-display) 0%, var(--primary) 100%); color: white; padding: 14px 28px; border-radius: 100px; font-size: 0.95rem; font-weight: 600; opacity: 0; transform: translateY(20px); transition: all 0.4s var(--ease-spring); pointer-events: none; z-index: 1000; box-shadow: 0 10px 30px rgba(0, 74, 173, 0.4);">
+        Notification Message
+    </div>
+
+    <script src="script/admin.js"></script>
+</body>
+
+</html>

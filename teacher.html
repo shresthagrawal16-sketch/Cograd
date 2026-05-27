@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medha — Elite Teacher Portal</title>
+    <link rel="icon" type="image/png" href="assets/medha.png">
+    <link rel="stylesheet" href="style/shared.css">
+    <link rel="stylesheet" href="style/teacher.css">
+</head>
+
+<body>
+
+    <div class="dashboard-canvas">
+        <div class="aurora-blob aurora-1"></div>
+        <div class="aurora-blob aurora-2"></div>
+        <div class="aurora-blob aurora-3"></div>
+    </div>
+
+    <nav class="nav-glass">
+       <a href="index.html" class="nav-logo" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="assets/logo1.webp" alt="Medha Logo"
+                style="height: 32px; width: auto; max-width: 200px; object-fit: contain; display: block; border-radius: 4px;">
+        </a>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+            <span class="badge badge-green float-fast"
+                style="padding: 8px 14px; font-size: 0.85rem; box-shadow: 0 5px 15px rgba(22,163,74,0.2);">✨
+                Verified</span>
+            <div
+                style="display: flex; align-items: center; gap: 12px; cursor: pointer; padding: 6px 16px 6px 6px; background: rgba(255,255,255,0.8); border-radius: 100px; border: 1px solid rgba(255,255,255,0.9); box-shadow: var(--shadow-sm); transition: transform 0.3s;">
+                <div class="avatar avatar-blue"
+                    style="width: 40px; height: 40px; box-shadow: 0 4px 10px rgba(0,74,173,0.3);">M</div>
+                <span style="font-weight: 700; font-family: var(--font-display); color: var(--ink-display);">Dr.
+                    Meera</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-wrapper">
+        <aside class="sidebar-glass float-delayed">
+            <div style="margin-bottom: 2rem;">
+                <p
+                    style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: var(--primary); letter-spacing: 0.1em; margin-bottom: 1rem; padding-left: 1rem;">
+                    Overview</p>
+                <a class="sidebar-link active" data-page="home"><span
+                        style="margin-right: 12px; font-size: 1.2rem;">🚀</span> Dashboard</a>
+                <a class="sidebar-link" data-page="students"><span
+                        style="margin-right: 12px; font-size: 1.2rem;">👨‍🎓</span> My Students</a>
+                <a class="sidebar-link" data-page="sessions"><span
+                        style="margin-right: 12px; font-size: 1.2rem;">📅</span> Sessions</a>
+            </div>
+            <div style="margin-bottom: 2rem;">
+                <p
+                    style="font-size: 0.75rem; text-transform: uppercase; font-weight: 800; color: var(--primary); letter-spacing: 0.1em; margin-bottom: 1rem; padding-left: 1rem;">
+                    Classroom</p>
+                <a class="sidebar-link" data-page="doubts">
+                    <span style="margin-right: 12px; font-size: 1.2rem;">💬</span> Doubts
+                    <span class="badge badge-red float-fast"
+                        style="margin-left: auto; background: #DC2626; color: white;">3 New</span>
+                </a>
+                <a class="sidebar-link" data-page="resources"><span
+                        style="margin-right: 12px; font-size: 1.2rem;">📁</span> Resources</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <div id="page-home" class="tab-panel active">
+
+                <div class="bento-card float-slow"
+                    style="background: linear-gradient(135deg, var(--primary) 0%, #003B8A 100%); color: white; border: none; margin-bottom: 2.5rem; padding: 3rem; overflow: hidden;">
+                    <div
+                        style="position: absolute; top: -50%; right: -10%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(0,198,255,0.4) 0%, transparent 70%); border-radius: 50%; filter: blur(30px);">
+                    </div>
+                    <h1 style="color: white; font-size: 2.8rem; margin-bottom: 0.5rem; position: relative; z-index: 2;">
+                        Good morning, Dr. Meera! ☀️</h1>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.15rem; position: relative; z-index: 2;">You
+                        have <strong style="color: #00C6FF;">3 classes</strong> today. Your students are ready to learn.
+                    </p>
+                </div>
+
+                <div class="grid-4" style="margin-bottom: 2.5rem;">
+                    <div class="bento-card float-fast"
+                        style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <div
+                            style="width: 56px; height: 56px; border-radius: 16px; background: rgba(29, 78, 216, 0.1); color: var(--blue); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1rem;">
+                            👨‍🎓</div>
+                        <div
+                            style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; line-height: 1; color: var(--ink-display);">
+                            28</div>
+                        <div style="font-size: 0.9rem; font-weight: 600; color: var(--ink-muted); margin-top: 0.5rem;">
+                            Active Students</div>
+                    </div>
+                    <div class="bento-card float-delayed"
+                        style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; border-color: rgba(22, 163, 74, 0.3);">
+                        <div
+                            style="width: 56px; height: 56px; border-radius: 16px; background: rgba(22, 163, 74, 0.1); color: var(--green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1rem;">
+                            ⭐</div>
+                        <div
+                            style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; line-height: 1; color: var(--green);">
+                            4.97</div>
+                        <div style="font-size: 0.9rem; font-weight: 600; color: var(--ink-muted); margin-top: 0.5rem;">
+                            Average Rating</div>
+                    </div>
+                    <div class="bento-card float-slow"
+                        style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <div
+                            style="width: 56px; height: 56px; border-radius: 16px; background: rgba(217, 119, 6, 0.1); color: var(--amber); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1rem;">
+                            💡</div>
+                        <div
+                            style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; line-height: 1; color: var(--ink-display);">
+                            3</div>
+                        <div style="font-size: 0.9rem; font-weight: 600; color: var(--ink-muted); margin-top: 0.5rem;">
+                            Pending Doubts</div>
+                    </div>
+                    <div class="bento-card float-fast"
+                        style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <div
+                            style="width: 56px; height: 56px; border-radius: 16px; background: rgba(147, 51, 234, 0.1); color: #9333EA; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1rem;">
+                            💸</div>
+                        <div
+                            style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; line-height: 1; color: var(--ink-display);">
+                            ₹48K</div>
+                        <div style="font-size: 0.9rem; font-weight: 600; color: var(--ink-muted); margin-top: 0.5rem;">
+                            Earned This Month</div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="bento-card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                            <h3 style="font-size: 1.5rem;">Today's Radar</h3>
+                            <button class="btn btn-primary btn-pulse magnetic" onclick="openScheduleModal()">+ New
+                                Session</button>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.8); border: 1px solid var(--border-subtle); border-radius: 24px; padding: 1.5rem; margin-bottom: 1rem; transition: transform 0.3s; cursor: pointer;"
+                            onmouseover="this.style.transform='scale(1.02)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div>
+                                    <h4 style="font-size: 1.1rem; margin-bottom: 5px; color: var(--ink-display);">
+                                        Integration (Batch A)</h4>
+                                    <p style="font-size: 0.9rem; color: var(--ink-muted);">9:00 AM · 60 min · 8 Students
+                                    </p>
+                                </div>
+                                <span class="badge badge-green" style="height: max-content;">✓ Done</span>
+                            </div>
+                        </div>
+
+                        <div
+                            style="background: linear-gradient(135deg, rgba(0, 198, 255, 0.1) 0%, rgba(0, 74, 173, 0.05) 100%); border: 2px solid rgba(0, 198, 255, 0.3); border-radius: 24px; padding: 1.5rem; margin-bottom: 1rem; position: relative; overflow: hidden; transform: scale(1.02); box-shadow: 0 10px 30px -10px rgba(0, 198, 255, 0.2);">
+                            <div
+                                style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #00C6FF;">
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <div>
+                                    <h4 style="font-size: 1.2rem; margin-bottom: 5px; color: var(--primary);">Limits
+                                        (Batch B)</h4>
+                                    <p style="font-size: 0.9rem; color: var(--ink-muted); font-weight: 600;">Starts in 2
+                                        hours</p>
+                                </div>
+                                <div class="avatar avatar-blue float-fast"
+                                    style="width: 40px; height: 40px; font-size: 1.2rem;">🎥</div>
+                            </div>
+                            <button class="btn btn-primary magnetic" style="width: 100%; font-size: 1.05rem;"
+                                onclick="toast('Launching Virtual Classroom...')">Join Live Class</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="bento-card alert-animated" style="padding: 1.5rem;">
+                            <div style="display: flex; gap: 1rem;">
+                                <span class="float-fast" style="font-size: 2rem;">⚠️</span>
+                                <div>
+                                    <h4 style="color: #B45309; margin-bottom: 5px; font-size: 1.1rem;">Arjun Sharma's
+                                        Focus Dropped</h4>
+                                    <p style="font-size: 0.95rem; color: var(--ink-body); margin-bottom: 1rem;">Focus
+                                        score fell below 75% this week. Medha AI suggests a quick check-in.</p>
+                                    <button class="btn btn-sm btn-outline magnetic"
+                                        style="border-color: #B45309; color: #B45309;"
+                                        onclick="toast('Encouraging message sent!')">Send Quick Audio Note</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bento-card"
+                            style="background: rgba(255, 255, 255, 0.8); border-left: 4px solid var(--red); padding: 1.5rem;">
+                            <div style="display: flex; gap: 1rem;">
+                                <span class="float-delayed" style="font-size: 2rem;">🚨</span>
+                                <div>
+                                    <h4 style="color: var(--red); margin-bottom: 5px; font-size: 1.1rem;">Priya Mehta
+                                        Absent</h4>
+                                    <p style="font-size: 0.95rem; color: var(--ink-body); margin-bottom: 1rem;">Missed 3
+                                        consecutive classes. Automated alert already sent to parents.</p>
+                                    <button class="btn btn-sm btn-outline magnetic"
+                                        onclick="toast('Checking parent status...')">View Parent Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-students" class="tab-panel">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">My Students</h2>
+                        <p style="font-size: 1.1rem; color: var(--ink-muted);">AI-powered focus tracking for 28
+                            students.</p>
+                    </div>
+                    <input type="text" class="form-input" placeholder="Search by name or batch..."
+                        style="width: 300px; padding: 14px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); font-size: 1rem;"
+                        oninput="searchStudents(this.value)">
+                </div>
+
+                <div class="bento-grid" id="student-grid">
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="script/teacher.js"></script>
+</body>
+
+</html>

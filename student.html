@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medha — Student Dashboard</title>
+    <link rel="icon" type="image/png" href="assets/medha.png">
+    <link rel="stylesheet" href="style/shared.css">
+    <link rel="stylesheet" href="style/student.css">
+</head>
+
+<body>
+
+    <div class="hero-bg-animated"
+        style="position: fixed; inset: 0; z-index: -2; pointer-events: none; overflow: hidden; background: var(--bg-main);">
+        <div class="aurora-blob aurora-1"
+            style="position: absolute; filter: blur(100px); border-radius: 50%; opacity: 0.6; animation: fluidOrbit 30s linear infinite; width: 60vw; height: 60vw; background: rgba(0, 74, 173, 0.12); top: -20%; left: -20%;">
+        </div>
+        <div class="aurora-blob aurora-2"
+            style="position: absolute; filter: blur(100px); border-radius: 50%; opacity: 0.6; animation: fluidOrbit 25s linear infinite reverse; width: 50vw; height: 50vw; background: rgba(0, 198, 255, 0.12); bottom: -30%; right: -10%;">
+        </div>
+        <div class="aurora-blob aurora-3"
+            style="position: absolute; filter: blur(100px); border-radius: 50%; opacity: 0.6; animation: fluidOrbit 35s linear infinite; width: 45vw; height: 45vw; background: rgba(147, 51, 234, 0.06); top: 30%; left: 40%;">
+        </div>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" style="display:flex; align-items:center; text-decoration:none;">
+                <img src="assets/logo1.webp" alt="Medha"
+                    style="height:32px; width:auto; object-fit:contain; border-radius:4px;">
+            </a>
+            <div class="nav-links">
+                <a href="#" class="active" data-page="home">Home</a>
+                <a href="#" data-page="schedule">Schedule</a>
+                <a href="#" data-page="subjects">Subjects</a>
+                <a href="#" data-page="tasks">Tasks</a>
+                <a href="#" data-page="progress">Progress</a>
+                <a href="#" data-page="leaderboard">Rank</a>
+                <a href="#" data-page="messages">Messages</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-primary btn-sm magnetic" onclick="openDoubtModal()"
+                    style="border-radius: 100px;">Ask Doubt</button>
+                <button class="notif-btn" onclick="openNotifications()" title="Notifications">
+                    🔔<span class="notif-dot"></span>
+                </button>
+                <div class="nav-user">
+                    <div class="avatar avatar-green">A</div>
+                    <span>Arjun</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="app-canvas">
+        <main class="main-content" style="padding: 0;">
+
+            <div id="page-home" class="tab-panel active">
+
+                <div class="greeting fade-in-stable">
+                    <h2>Welcome back, Arjun.</h2>
+                    <p>You're on a 4-day streak. Keep your momentum going.</p>
+                </div>
+
+                <div class="bento-dashboard">
+
+                    <div class="card-flat bento-span-2 skeleton fade-in-stable">
+                        <div
+                            style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem">
+                            <h3 style="margin: 0;">Today's Classes</h3>
+                            <span class="badge badge-blue">Thursday, 22 May</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-time">9:00 AM</span>
+                            <div class="schedule-dot" style="background:var(--blue)"></div>
+                            <div class="schedule-info" style="flex:1; min-width: 0;">
+                                <div class="schedule-subject">Mathematics — Calculus</div>
+                                <div class="schedule-teacher">Dr. Meera Krishnan</div>
+                            </div>
+                            <span class="badge badge-green">✓ Done</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-time">12:00 PM</span>
+                            <div class="schedule-dot" style="background:var(--amber)"></div>
+                            <div class="schedule-info" style="flex:1; min-width: 0;">
+                                <div class="schedule-subject">Physics — Laws of Motion</div>
+                                <div class="schedule-teacher">Prof. Vikram Pillai</div>
+                            </div>
+                            <span class="badge badge-amber">Starting Soon</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div class="card-flat premium-stat-card blue-glow skeleton fade-in-stable"
+                            style="min-height: 0; flex: 1; padding: 1.5rem;">
+                            <div class="stat-blur-circle"></div>
+                            <div class="premium-stat-number" style="font-size: 2.2rem;">88%</div>
+                            <div class="premium-stat-label">Avg. Focus</div>
+                        </div>
+                        <div class="card-flat premium-stat-card purple-glow skeleton fade-in-stable"
+                            style="min-height: 0; flex: 1; padding: 1.5rem;">
+                            <div class="stat-blur-circle"></div>
+                            <div class="premium-stat-number" style="font-size: 2.2rem;">#7</div>
+                            <div class="premium-stat-label">Batch Rank</div>
+                        </div>
+                    </div>
+
+                    <div class="ai-tip bento-span-2 skeleton fade-in-stable">
+                        <div class="ai-tip-header" style="margin-bottom: 1rem;">
+                            <span class="ai-tip-icon">🧠</span>
+                            <span class="ai-tip-label">Medha AI Insights</span>
+                        </div>
+                        <p style="font-size: 1.05rem; color: var(--ink-display); margin: 0;">You're ahead in Calculus —
+                            great! Focus extra time on <strong>Organic Chemistry</strong> today. Even 30 minutes will
+                            help boost your mock test score this weekend.</p>
+                    </div>
+
+                    <div class="card-flat skeleton fade-in-stable"
+                        style="display: flex; flex-direction: column; justify-content: center;">
+                        <h4 style="margin-bottom:1rem; text-align: center; font-size: 1.1rem;">Weekly Streak 🔥</h4>
+                        <div class="streak-row">
+                            <div class="streak-day">
+                                <div class="streak-dot done"></div>
+                                <div class="streak-day-label">T</div>
+                            </div>
+                            <div class="streak-day">
+                                <div class="streak-dot done"></div>
+                                <div class="streak-day-label">W</div>
+                            </div>
+                            <div class="streak-day">
+                                <div class="streak-dot today"></div>
+                                <div class="streak-day-label">T</div>
+                            </div>
+                            <div class="streak-day">
+                                <div class="streak-dot future"></div>
+                                <div class="streak-day-label">F</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="page-tasks" class="tab-panel">
+                <div class="greeting">
+                    <h2>Tasks & Homework</h2>
+                    <p>Check off tasks as you finish them. Your teachers monitor your progress.</p>
+                </div>
+                <div
+                    style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.75rem">
+                    <div style="display:flex; gap:0.5rem">
+                        <button class="btn btn-sm btn-primary" id="filter-all" onclick="filterTasks('all')">All
+                            Tasks</button>
+                        <button class="btn btn-sm btn-outline" id="filter-pending"
+                            onclick="filterTasks('pending')">Pending</button>
+                        <button class="btn btn-sm btn-outline" id="filter-done"
+                            onclick="filterTasks('done')">Done</button>
+                    </div>
+                    <button class="btn btn-sm btn-primary magnetic" onclick="openAddTask()">+ Add Task</button>
+                </div>
+                <div class="card-flat skeleton" id="task-list" style="padding: 1rem;">
+                </div>
+            </div>
+
+            <div id="page-progress" class="tab-panel">
+                <div class="greeting">
+                    <h2>My Progress</h2>
+                    <p>See how far you've come in each subject.</p>
+                </div>
+                <div class="bento-dashboard" style="margin-bottom:1.5rem">
+                    <div class="card-flat bento-span-2 skeleton" id="progress-chart-container">
+                        <h4 style="margin-bottom:1.25rem">Subject Coverage</h4>
+                        <div id="progress-bars"></div>
+                    </div>
+                    <div class="card-flat skeleton">
+                        <h4 style="margin-bottom:1.25rem">Monthly Stats</h4>
+                        <div class="schedule-item" style="padding: 0.75rem 0; border: none;">
+                            <span
+                                style="flex:1; font-size:0.95rem; font-weight:500; color:var(--ink-display)">Classes</span>
+                            <strong style="color:var(--green)">34 / 36</strong>
+                        </div>
+                        <div class="schedule-item" style="padding: 0.75rem 0; border: none;">
+                            <span
+                                style="flex:1; font-size:0.95rem; font-weight:500; color:var(--ink-display)">Tasks</span>
+                            <strong style="color:var(--blue)">28 / 32</strong>
+                        </div>
+                        <div class="schedule-item" style="padding: 0.75rem 0; border: none;">
+                            <span
+                                style="flex:1; font-size:0.95rem; font-weight:500; color:var(--ink-display)">Focus</span>
+                            <strong style="color:var(--blue)">88 / 100</strong>
+                        </div>
+                        <div class="schedule-item" style="padding: 0.75rem 0; border: none;">
+                            <span style="flex:1; font-size:0.95rem; font-weight:500; color:var(--ink-display)">Avg
+                                Test</span>
+                            <strong style="color:var(--green)">74%</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-tip skeleton" style="border-radius: 24px;">
+                    <span style="font-size: 1.2rem;">💡</span>
+                    <span style="margin-left: 10px; font-size: 1rem; color: var(--ink-display);"><strong>You've improved
+                            by 12% this month.</strong> Chemistry is your biggest opportunity — your score there went up
+                        from 58% to 71%.</span>
+                </div>
+            </div>
+
+            <div id="page-leaderboard" class="tab-panel">
+                <div class="greeting">
+                    <h2>Leaderboard 🏆</h2>
+                    <p>Top students in your batch this month, ranked by consistency.</p>
+                </div>
+                <div class="bento-dashboard">
+                    <div class="card-flat bento-span-2 skeleton" style="padding: 1rem 2rem;">
+                        <div class="rank-row">
+                            <span class="rank-num top" style="font-size:1.2rem; min-width:30px;">🥇</span>
+                            <div class="avatar avatar-amber" style="width:36px; height:36px;">P</div>
+                            <span class="rank-name" style="flex:1; font-weight:600; color:var(--ink-display);">Priya
+                                Mehta</span>
+                            <span class="rank-pts" style="font-weight:700; color:var(--blue);">1,840 pts</span>
+                        </div>
+                        <div class="rank-row">
+                            <span class="rank-num top" style="font-size:1.2rem; min-width:30px;">🥈</span>
+                            <div class="avatar" style="background:var(--ink-muted); width:36px; height:36px;">R</div>
+                            <span class="rank-name" style="flex:1; font-weight:600; color:var(--ink-display);">Rohan
+                                Gupta</span>
+                            <span class="rank-pts" style="font-weight:700; color:var(--blue);">1,720 pts</span>
+                        </div>
+                        <div class="rank-row">
+                            <span class="rank-num top" style="font-size:1.2rem; min-width:30px;">🥉</span>
+                            <div class="avatar" style="background:#c2410c; width:36px; height:36px;">S</div>
+                            <span class="rank-name" style="flex:1; font-weight:600; color:var(--ink-display);">Shreya
+                                Nair</span>
+                            <span class="rank-pts" style="font-weight:700; color:var(--blue);">1,690 pts</span>
+                        </div>
+                        <div class="rank-row"
+                            style="background:var(--blue-light); border-radius:12px; margin-top:1rem; border:none;">
+                            <span class="rank-num" style="color:var(--blue); font-weight:800; min-width:30px;">7</span>
+                            <div class="avatar avatar-green" style="width:36px; height:36px;">A</div>
+                            <span class="rank-name" style="flex:1; font-weight:700; color:var(--blue);">Arjun Sharma
+                                (You)</span>
+                            <span class="rank-pts" style="font-weight:700; color:var(--blue);">1,420 pts</span>
+                        </div>
+                    </div>
+                    <div class="ai-tip skeleton" style="display:flex; flex-direction:column; justify-content:center;">
+                        <span style="font-size: 2rem; margin-bottom: 1rem;">🚀</span>
+                        <p style="font-size: 1.05rem; color: var(--ink-display); margin: 0;">Complete your Chemistry
+                            task today to earn 80 pts and move up to <strong>#5</strong>!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-messages" class="tab-panel">
+                <div class="greeting">
+                    <h2>Messages</h2>
+                    <p>Communicate directly with your verified teachers.</p>
+                </div>
+                <div class="bento-dashboard">
+                    <div id="message-list" class="card-flat bento-span-2 skeleton" style="padding: 1rem;">
+                    </div>
+                    <div class="card-flat skeleton">
+                        <h4 style="margin-bottom:1rem">Send Message</h4>
+                        <div class="form-group">
+                            <label class="form-label">To</label>
+                            <select class="form-select">
+                                <option>Dr. Meera Krishnan</option>
+                                <option>Prof. Vikram Pillai</option>
+                                <option>Ms. Ananya Rao</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-textarea" placeholder="Type message..."></textarea>
+                        </div>
+                        <button class="btn btn-primary magnetic" onclick="sendMessage()"
+                            style="width: 100%;">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-schedule" class="tab-panel">
+                <div class="greeting">
+                    <h2>My Schedule</h2>
+                    <p>All your upcoming classes in one place.</p>
+                </div>
+                <div class="card-flat skeleton" style="max-width: 800px;">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchInnerTab(this,'sched-today')">Today</button>
+                        <button class="tab-btn" onclick="switchInnerTab(this,'sched-week')">This Week</button>
+                    </div>
+                    <div id="sched-today" class="tab-panel active">
+                        <div class="schedule-item">
+                            <span class="schedule-time">9:00 AM</span>
+                            <div class="schedule-dot" style="background:var(--green)"></div>
+                            <div class="schedule-info" style="flex:1;">
+                                <div class="schedule-subject">Mathematics — Integration</div>
+                                <div class="schedule-teacher">Dr. Meera Krishnan</div>
+                            </div>
+                            <span class="badge badge-green">Completed ✓</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="schedule-time">12:00 PM</span>
+                            <div class="schedule-dot" style="background:var(--blue)"></div>
+                            <div class="schedule-info" style="flex:1;">
+                                <div class="schedule-subject">Physics — Laws of Motion</div>
+                                <div class="schedule-teacher">Prof. Vikram Pillai</div>
+                            </div>
+                            <span class="badge badge-amber">Starting soon</span>
+                        </div>
+                    </div>
+                    <div id="sched-week" class="tab-panel">
+                        <div class="alert alert-blue" style="border-radius: 12px; margin-top: 1rem;">
+                            <span>📅</span>
+                            <span>Full week view — 14 classes scheduled this week.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-subjects" class="tab-panel">
+                <div class="greeting">
+                    <h2>My Subjects</h2>
+                    <p>Your teachers and module progress.</p>
+                </div>
+                <div class="bento-dashboard">
+                    <div class="subject-card skeleton">
+                        <div class="subject-header">
+                            <div class="subject-icon" style="background:var(--blue-light)">📐</div>
+                            <span class="badge badge-green">On Track</span>
+                        </div>
+                        <div class="subject-name">Mathematics</div>
+                        <div class="subject-teacher">Dr. Meera Krishnan</div>
+                        <div class="progress-track" style="margin-top: 1.5rem;">
+                            <div class="progress-fill" style="width:68%"></div>
+                        </div>
+                        <div style="font-size:0.8rem; color:var(--ink-muted); margin-top:8px;">17 of 25 chapters</div>
+                    </div>
+                    <div class="subject-card skeleton">
+                        <div class="subject-header">
+                            <div class="subject-icon" style="background:var(--amber-light)">⚡</div>
+                            <span class="badge badge-green">On Track</span>
+                        </div>
+                        <div class="subject-name">Physics</div>
+                        <div class="subject-teacher">Prof. Vikram Pillai</div>
+                        <div class="progress-track" style="margin-top: 1.5rem;">
+                            <div class="progress-fill green" style="width:74%"></div>
+                        </div>
+                        <div style="font-size:0.8rem; color:var(--ink-muted); margin-top:8px;">15 of 20 chapters</div>
+                    </div>
+                    <div class="subject-card skeleton">
+                        <div class="subject-header">
+                            <div class="subject-icon" style="background:var(--green-light)">🧪</div>
+                            <span class="badge badge-amber">Needs Attention</span>
+                        </div>
+                        <div class="subject-name">Chemistry</div>
+                        <div class="subject-teacher">Ms. Ananya Rao</div>
+                        <div class="progress-track" style="margin-top: 1.5rem;">
+                            <div class="progress-fill amber" style="width:44%"></div>
+                        </div>
+                        <div style="font-size:0.8rem; color:var(--ink-muted); margin-top:8px;">10 of 22 chapters</div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="doubt-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 style="margin: 0;">💬 Ask a Doubt</h3>
+                <button class="modal-close" onclick="closeModal('doubt-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Subject</label>
+                    <select class="form-select">
+                        <option>📐 Mathematics</option>
+                        <option>⚡ Physics</option>
+                        <option>🧪 Chemistry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Your Doubt</label>
+                    <textarea class="form-textarea" placeholder="Describe what you're stuck on..." id="doubt-text"
+                        rows="4"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('doubt-modal')">Cancel</button>
+                <button class="btn btn-primary" onclick="submitDoubt()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="add-task-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 style="margin: 0;">➕ Add Task</h3>
+                <button class="modal-close" onclick="closeModal('add-task-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <input type="text" class="form-input" placeholder="e.g. Solve 20 problems" id="new-task-text">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Subject</label>
+                    <select class="form-select" id="new-task-subject">
+                        <option value="Maths">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Due date</label>
+                    <input type="date" class="form-input" id="new-task-date">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('add-task-modal')">Cancel</button>
+                <button class="btn btn-primary" onclick="addTask()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notif-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 style="margin: 0;">🔔 Notifications</h3>
+                <button class="modal-close" onclick="closeModal('notif-modal')">×</button>
+            </div>
+            <div class="modal-body" style="padding:0">
+                <div id="notif-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="script/student.js"></script>
+</body>
+
+</html>
